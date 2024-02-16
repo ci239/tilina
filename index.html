@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e7dcec; /* Fondo del cuerpo - Morado pastel */
+            text-align: center;
+            margin: 50px;
+        }
+
+        .start-button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #b392ac; /* Color de fondo del botón - Morado más oscuro */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .card {
+            display: none;
+            background-color: #f4ebf7; /* Color de fondo de la tarjeta - Morado claro */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .message {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #523b4e; /* Color de texto - Morado más oscuro */
+            margin-bottom: 20px;
+        }
+
+        .signature {
+            font-style: italic;
+            font-size: 16px;
+            color: #7d6392; /* Color de firma - Morado medio */
+        }
+    </style>
+    <title>Carta de San Valentín</title>
+</head>
+<body>
+    <button class="start-button" onclick="showCard()">Da clic aquí</button>
+
+    <div class="card" id="card">
+        <h1 style="color: #7d6392;">¡Feliz Día de San Valentín!</h1>
+        <div class="message">
+            <p style="color: #523b4e;">Hola mi amor,</p>
+            <p style="color: #7d6392;">Te amo. Eres lo mejor en este mundo, incluso cuando yo llego a ser una mala persona. Perdón por ser así; estoy intentando cambiar y agradezco el apoyo que me das. Estoy tan orgullosa de cómo cada día te esfuerzas más para mejorar. Estoy intentando mejorar también, y aunque a veces me trato de rendir, ahí estás tú para ayudarme. Te amo tanto, y a veces siento que no te merezco. También estoy tratando de cambiar esa idea. Espero mejorar muy pronto. Gracias por querer estar, te amo demasiado. ¡Muak!</p>
+        </div>
+        <p class="signature">Con todo mi amor,</p>
+        <p class="signature">Tu novi@</p>
+    </div>
+
+    <script>
+        function showCard() {
+            var button = document.querySelector('.start-button');
+            var card = document.getElementById('card');
+
+            // Oculta el botón y muestra la tarjeta
+            button.style.display = 'none';
+            card.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
